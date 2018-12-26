@@ -41,7 +41,11 @@ def play(songs)
 end
 
 def list(songs)
-  songs.each_with_index do |song, number| 
+  songs.each_with_index do |song, number|
     puts "#{number + 1}. #{song}"
   end
+end
+
+def exit_jukebox
+  puts "Goodbye"
 end
