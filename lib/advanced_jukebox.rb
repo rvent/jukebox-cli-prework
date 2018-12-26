@@ -3,13 +3,13 @@
 #with the correct path to this directory on your computer
 
 my_songs = {
-"Go Go GO" => './jukebox-cli-prework/audio/Emerald-Park/01.mp3',
-"LiberTeens" => './jukebox-cli-prework/audio/Emerald-Park/02.mp3',
+"Go Go GO" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/01.mp3',
+"LiberTeens" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/02.mp3',
 "Hamburg" =>  '/jukebox-cli-prework/audio/Emerald-Park/03.mp3',
-"Guiding Light" => './jukebox-cli-prework/audio/Emerald-Park/04.mp3',
-"Wolf" => './jukebox-cli-prework/audio/Emerald-Park/05.mp3',
-"Blue" => './jukebox-cli-prework/audio/Emerald-Park/06.mp3',
-"Graduation Failed" => './jukebox-cli-prework/audio/Emerald-Park/07.mp3'
+"Guiding Light" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/04.mp3',
+"Wolf" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/05.mp3',
+"Blue" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/06.mp3',
+"Graduation Failed" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/07.mp3'
 }
 
 def help
