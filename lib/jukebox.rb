@@ -27,3 +27,7 @@ def help
 - exit : exits this program
 "
 end
+
+def play(songs)
+  puts "Pleas enter a song name or number:"
+end
