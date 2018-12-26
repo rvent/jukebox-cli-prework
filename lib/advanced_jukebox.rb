@@ -3,13 +3,13 @@
 #with the correct path to this directory on your computer
 
 my_songs = {
-"Go Go GO" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/01.mp3',
-"LiberTeens" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/02.mp3',
+"Go Go GO" => 'home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/01.mp3',
+"LiberTeens" => 'home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/02.mp3',
 "Hamburg" =>  '/jukebox-cli-prework/audio/Emerald-Park/03.mp3',
-"Guiding Light" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/04.mp3',
-"Wolf" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/05.mp3',
-"Blue" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/06.mp3',
-"Graduation Failed" => 'home/restful-revert-5296/jukebox-cli-preworkaudio/Emerald-Park/07.mp3'
+"Guiding Light" => 'home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/04.mp3',
+"Wolf" => 'home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/05.mp3',
+"Blue" => 'home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/06.mp3',
+"Graduation Failed" => 'home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/07.mp3'
 }
 
 def help
@@ -22,6 +22,47 @@ def help
 "
 end
 
+def play(songs)
+  puts "Please enter a song name or number:"
+  song_choice = gets.chomp
+  if songs.include?(song_choice)
+    puts "Playing #{song_choice}"
+    system "open #{sonng[song_choice]}"
+  elsif (song_choice.to_i > 0) && (song_choice.to_i <= songs.length)
+    puts "Playing #{songs[song_choice.to_i - 1]}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+
+def list(songs)
+  songs.each_with_index do |song, number|
+    puts "#{number + 1}. #{song}"
+  end
+end
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run(songs)
+  help
+  puts "Please enter a command:"
+  command = gets.chomp
+  while command != "exit"
+    case command
+    when "play"
+      play(songs)
+    when "help"
+      help
+    when "list"
+      list(songs)
+    end
+    puts "Please enter a command:"
+    command = gets.chomp
+  end
+  exit_jukebox
+end
 
 
 
