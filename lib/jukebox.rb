@@ -51,5 +51,5 @@ def exit_jukebox
 end
 
 def run
-
+  puts help 
 end
