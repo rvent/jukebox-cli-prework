@@ -29,7 +29,7 @@ def help
 end
 
 def play(songs)
-  puts "Pleas enter a song name or number:"
+  puts "Please enter a song name or number:"
   song_choice = gets.chomp
   if songs.include?(song_choice) || ((song_choice.to_i > 0) && (song_choice.to_i < songs.length))
     puts "Playing #{song_choice}"
