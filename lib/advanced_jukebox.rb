@@ -43,7 +43,7 @@ def play(songs)
   song_choice = gets.strip
   if songs.include?(song_choice)
     puts "Playing #{song_choice}"
-    system "xdg-open #{songs[song_choice]}"
+    system "open #{songs[song_choice]}"
   else
     puts "Invalid input, please try again"
   end
