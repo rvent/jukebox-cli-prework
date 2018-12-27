@@ -36,15 +36,6 @@ def play(songs)
   end
 end
 
-def list(songs)
-  songs.keys do |song, number|
-    puts "#{number + 1}. #{song}"
-  end
-end
-
-def exit_jukebox
-  puts "Goodbye"
-end
 
 def run(songs)
   help
@@ -71,6 +62,9 @@ end
 def list(my_songs)
   #this method is different! Collect the keys of the my_songs hash and
   #list the songs by name
+  songs.keys do |song, number|
+    puts "#{number + 1}. #{song}"
+  end
 end
 
 
