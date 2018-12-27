@@ -27,10 +27,10 @@ def play(songs)
   song_choice = gets.chomp
   if songs.include?(song_choice)
     puts "Playing #{song_choice}"
-    system "open #{sonng[song_choice]}"
+    system "open #{songs[song_choice]}"
   elsif (song_choice.to_i > 0) && (song_choice.to_i <= songs.length)
     puts "Playing #{songs[songs.keys[song_choice.to_i - 1]]}"
-    system "open #{sonng[song_choice]}"
+    system "open #{songs[song_choice]}"
   else
     puts "Invalid input, please try again"
   end
