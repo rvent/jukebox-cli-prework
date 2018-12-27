@@ -30,7 +30,7 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  song_choice = gets.chomp
+  song_choice = gets.strip
   if songs.include?(song_choice)
     puts "Playing #{song_choice}"
   elsif (song_choice.to_i > 0) && (song_choice.to_i <= songs.length)
@@ -53,7 +53,7 @@ end
 def run(songs)
   help
   puts "Please enter a command:"
-  command = gets.chomp
+  command = gets.strip
   while command != "exit"
     case command
     when "play"
@@ -64,7 +64,7 @@ def run(songs)
       list(songs)
     end
     puts "Please enter a command:"
-    command = gets.chomp
+    command = gets.strip
   end
   exit_jukebox
 end
