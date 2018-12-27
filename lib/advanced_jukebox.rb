@@ -3,13 +3,13 @@
 #with the correct path to this directory on your computer
 
 my_songs = {
-"Go Go GO" => '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/01.mp3',
-"LiberTeens" => '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/02.mp3',
-"Hamburg" =>  '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/03.mp3',
-"Guiding Light" => '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/04.mp3',
-"Wolf" => '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/05.mp3',
-"Blue" => '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/06.mp3',
-"Graduation Failed" => '/home/rvent/.atom/.learn-ide/home/restful-revert-5296/jukebox-cli-prework/audio/Emerald-Park/07.mp3'
+"Go Go GO" => './jukebox-cli-prework/audio/Emerald-Park/01.mp3',
+"LiberTeens" => './jukebox-cli-prework/audio/Emerald-Park/02.mp3',
+"Hamburg" =>  './jukebox-cli-prework/audio/Emerald-Park/03.mp3',
+"Guiding Light" => './jukebox-cli-prework/audio/Emerald-Park/04.mp3',
+"Wolf" => './jukebox-cli-prework/audio/Emerald-Park/05.mp3',
+"Blue" => './jukebox-cli-prework/audio/Emerald-Park/06.mp3',
+"Graduation Failed" => './jukebox-cli-prework/audio/Emerald-Park/07.mp3'
 }
 
 def help
@@ -40,10 +40,10 @@ def play(songs)
   #if it is, play the song using the system 'open <file path>' syntax
   #get the file path of the song by looking it up in the my_songs hash
   puts "Please enter a song name:"
-  song_choice = gets.chomp
+  song_choice = gets.strip
   if songs.include?(song_choice)
     puts "Playing #{song_choice}"
-    system "open #{songs[song_choice]}"
+    system "xdg-open #{songs[song_choice]}"
   else
     puts "Invalid input, please try again"
   end
@@ -58,7 +58,7 @@ def run(songs)
   #this method is the same as in jukebox.rb
   help
   puts "Please enter a command:"
-  command = gets.chomp
+  command = gets.strip
   while command != "exit"
     case command
     when "play"
@@ -69,7 +69,7 @@ def run(songs)
       list(songs)
     end
     puts "Please enter a command:"
-    command = gets.chomp
+    command = gets.strip
   end
   exit_jukebox
 end
