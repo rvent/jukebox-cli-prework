@@ -54,7 +54,7 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-def run(my_songs)
+def run(songs)
   #this method is the same as in jukebox.rb
   help
   puts "Please enter a command:"
