@@ -29,14 +29,14 @@ def play(songs)
     puts "Playing #{song_choice}"
     system "open #{sonng[song_choice]}"
   elsif (song_choice.to_i > 0) && (song_choice.to_i <= songs.length)
-    puts "Playing #{songs[song_choice.to_i - 1]}"
+    puts "Playing #{songs[songs.keys[song_choice.to_i - 1]]}"
   else
     puts "Invalid input, please try again"
   end
 end
 
 def list(songs)
-  songs.each_with_index do |song, number|
+  songs.keys do |song, number|
     puts "#{number + 1}. #{song}"
   end
 end
