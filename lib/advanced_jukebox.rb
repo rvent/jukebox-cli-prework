@@ -30,6 +30,7 @@ def play(songs)
     system "open #{sonng[song_choice]}"
   elsif (song_choice.to_i > 0) && (song_choice.to_i <= songs.length)
     puts "Playing #{songs[songs.keys[song_choice.to_i - 1]]}"
+    system "open #{sonng[song_choice]}"
   else
     puts "Invalid input, please try again"
   end
